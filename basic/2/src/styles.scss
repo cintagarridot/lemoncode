@@ -1,0 +1,32 @@
+@use "base" as *;
+
+.base {
+    @extend .box;
+    background-color: red;
+}
+
+.important {
+    @extend .box;
+    background-color: brown;
+}
+
+.warning {
+    @extend .box;
+    background-color: pink;
+}
+
+.principal-font { 
+    @extend .font-style;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.secondary-font {
+    @extend .font-style;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.box-with-shadow {
+    @extend .box;
+    margin-top: 15px;
+    box-shadow:  -20px 15px 10px -10px black;
+}

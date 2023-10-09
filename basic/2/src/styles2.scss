@@ -1,0 +1,36 @@
+@use "base" as *;
+
+.radius {
+    border-radius: 5%;
+}
+
+.base {
+    @extend .box, .radius;
+    background-color: blue;
+}
+
+.important {
+    @extend .box, .radius;
+    background-color: darkblue;
+}
+
+.warning {
+    @extend .box, .radius;
+    background-color: aqua;
+}
+
+.principal-font {
+    @extend .font-style;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.secondary-font {
+    @extend .font-style;
+    font-family: serif;
+}
+
+.box-with-shadow {
+    @extend .box, .radius;
+    margin-top: 15px;
+    box-shadow:  20px 20px 10px -10px black;
+}     
