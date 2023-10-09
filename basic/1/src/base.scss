@@ -1,0 +1,18 @@
+.container {
+    display: inline-flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 5px;
+  }
+  
+  .box-style {
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;  
+  }
+  body {
+    --base-color-container-1: red;
+    --base-color-container-2: blue;
+    --base-color-container-3: green;
+  }
