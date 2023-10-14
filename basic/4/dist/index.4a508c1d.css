@@ -1,0 +1,78 @@
+body {
+  flex-direction: column;
+  width: 30vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.grid-container {
+  border: 1px solid gray;
+  grid-template-rows: 38vh 1fr;
+  grid-template-columns: 1fr;
+  display: grid;
+}
+
+.text-info {
+  padding: 10px;
+}
+
+.image {
+  background: url("ship.1164d85e.jpg") 0 0 / 100% no-repeat;
+}
+
+.published-div {
+  text-align: end;
+  margin-top: 30px;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.text {
+  margin-top: 10px;
+}
+
+.date-published {
+  color: #adff2f;
+}
+
+#more-info-button {
+  color: #fff;
+  background-color: #adff2f;
+  border-color: #adff2f;
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+}
+
+@media screen and (width <= 1064px) and (width >= 760px) {
+  .grid-container {
+    grid-template-columns: repeat(autofill, 1fr);
+    border: 1px solid gray;
+    grid-template-rows: 25vh 1fr;
+    display: grid;
+  }
+}
+
+@media screen and (width <= 450px) {
+  .grid-container {
+    border: 1px solid gray;
+    grid-template-rows: 13vh 1fr;
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+}
+
+@media screen and (width <= 700px) and (width >= 450px) {
+  .grid-container {
+    border: 1px solid gray;
+    grid-template-rows: 22vh 1fr;
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+}
+
+/*# sourceMappingURL=index.4a508c1d.css.map */

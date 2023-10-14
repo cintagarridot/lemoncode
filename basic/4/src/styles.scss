@@ -1,0 +1,81 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+.grid-container {
+    display: grid;
+    border: 1px solid grey;
+    grid-template-columns: 1fr;
+    grid-template-rows: 38vh 1fr;
+}
+
+.text-info {
+    padding: 10px;
+}
+
+.image {
+    background: url('./ship.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.published-div {
+    margin-top: 30px;
+    text-align: end;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.text {
+    margin-top: 10px;
+}
+
+.date-published {
+    color: greenyellow;
+}
+
+#more-info-button {
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: greenyellow;
+    border-color: greenyellow;
+    height: 50px;
+}
+
+@media screen and (max-width: 1064px) and (min-width: 760px) {
+    .grid-container {
+        display: grid;
+        border: 1px solid grey;
+        grid-template-columns: repeat(autofill, 1fr);
+        grid-template-rows: 25vh 1fr;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .grid-container {
+        display: grid;
+        border: 1px solid grey;
+        grid-template-columns: 1fr;
+        grid-template-rows: 13vh 1fr;
+    }
+}
+
+@media screen and (max-width: 700px) and (min-width: 450px) {
+    .grid-container {
+        display: grid;
+        border: 1px solid grey;
+        grid-template-columns: 1fr;
+        grid-template-rows: 22vh 1fr;
+    }
+}
+
+
