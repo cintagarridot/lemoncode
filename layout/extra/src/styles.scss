@@ -1,0 +1,38 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 60px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "headerdiv headerdiv"
+    "frameworknav principal"
+    "footer footer";
+}
+
+header {
+  grid-area: headerdiv;
+}
+
+.nav-container {
+  grid-area: frameworknav;
+}
+
+.list {
+  grid-area: principal;
+  display: flex
+}
+
+.page-title {
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+  background-color: khaki;
+}
+
+footer {
+  padding: 10px;
+  background-color: lightgoldenrodyellow;
+  width: 100%;
+  grid-area: footer;
+}

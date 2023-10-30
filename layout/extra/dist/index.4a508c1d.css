@@ -1,0 +1,39 @@
+body {
+  grid-template: "headerdiv headerdiv" 1fr
+                 "frameworknav principal" 1fr
+                 "footer footer" 60px
+                 / 1fr 1fr;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+
+header {
+  grid-area: headerdiv;
+}
+
+.nav-container {
+  grid-area: frameworknav;
+}
+
+.list {
+  grid-area: principal;
+  display: flex;
+}
+
+.page-title {
+  color: #fff;
+  background-color: khaki;
+  padding: 20px;
+  font-size: 20px;
+}
+
+footer {
+  background-color: #fafad2;
+  grid-area: footer;
+  width: 100%;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=index.4a508c1d.css.map */
