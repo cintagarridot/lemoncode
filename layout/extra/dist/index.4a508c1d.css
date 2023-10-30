@@ -2,10 +2,8 @@ body {
   grid-template: "headerdiv headerdiv" 1fr
                  "frameworknav principal" 1fr
                  "footer footer" 60px
-                 / 1fr 1fr;
+                 / 100px 1fr;
   height: 100vh;
-  margin: 0;
-  padding: 0;
   display: grid;
 }
 
@@ -13,12 +11,41 @@ header {
   grid-area: headerdiv;
 }
 
-.nav-container {
+.toolbar {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.toolbar input {
+  border-radius: 3px;
+  height: 20px;
+}
+
+.menu-container {
   grid-area: frameworknav;
 }
 
-.list {
+main {
+  background-color: gray;
   grid-area: principal;
+}
+
+.list {
+  flex-wrap: wrap;
+  place-content: space-between;
+  display: flex;
+}
+
+.card {
+  border: 1px solid #000;
+  border-radius: 3px;
+  justify-items: center;
+  padding: 30px;
+}
+
+.page-container {
   display: flex;
 }
 
@@ -26,7 +53,7 @@ header {
   color: #fff;
   background-color: khaki;
   padding: 20px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 footer {

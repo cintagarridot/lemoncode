@@ -1,10 +1,8 @@
 body {
-    padding: 0;
-    margin: 0;
     height: 100vh;
     display: grid;
+    grid-template-columns: 100px 1fr;
     grid-template-rows: 1fr 1fr 60px;
-    grid-template-columns: 1fr 1fr;
     grid-template-areas: "headerdiv headerdiv"
     "frameworknav principal"
     "footer footer";
@@ -14,19 +12,49 @@ header {
   grid-area: headerdiv;
 }
 
-.nav-container {
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+
+  input {
+    height: 20px;
+    border-radius: 3px;
+  }
+}
+
+.menu-container {
   grid-area: frameworknav;
 }
 
-.list {
+main {
   grid-area: principal;
-  display: flex
+  background-color: gray;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.card {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 30px;
+  justify-items: center;
+}
+
+.page-container {
+  display: flex;
 }
 
 .page-title {
   padding: 20px;
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   background-color: khaki;
 }
 
