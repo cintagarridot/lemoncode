@@ -1,8 +1,8 @@
 body {
-  grid-template: "headerdiv headerdiv" 1fr
+  grid-template: "headerdiv headerdiv" 105px
                  "frameworknav principal" 1fr
-                 "footer footer" 60px
-                 / 100px 1fr;
+                 "footer footer" 40px
+                 / 200px 1fr;
   height: 100vh;
   display: grid;
 }
@@ -23,30 +23,62 @@ header {
   height: 20px;
 }
 
-.menu-container {
+nav {
+  background-color: #556b2f;
   grid-area: frameworknav;
 }
 
+nav .menu-title {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 10px;
+  font-family: Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav ul {
+  background-color: #ffffe0;
+  flex-direction: column;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  border-bottom: 1px solid #d3d3d3;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+}
+
 main {
-  background-color: gray;
+  background-color: #d3d3d3;
   grid-area: principal;
 }
 
 .list {
-  flex-wrap: wrap;
-  place-content: space-between;
+  flex-flow: wrap;
+  justify-content: center;
+  gap: 15px;
   display: flex;
 }
 
 .card {
+  background-color: #fff;
   border: 1px solid #000;
   border-radius: 3px;
-  justify-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  place-items: center;
+  width: 150px;
+  height: 130px;
   padding: 30px;
+  display: flex;
 }
 
-.page-container {
-  display: flex;
+.card img {
+  border-radius: 50%;
 }
 
 .page-title {
@@ -59,8 +91,9 @@ main {
 footer {
   background-color: #fafad2;
   grid-area: footer;
+  align-items: center;
   width: 100%;
-  padding: 10px;
+  display: flex;
 }
 
 /*# sourceMappingURL=index.4a508c1d.css.map */
