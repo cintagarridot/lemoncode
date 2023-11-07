@@ -11,8 +11,7 @@
     display: flex;
     align-items: center;  
   }
-  body {
-    --base-color-container-1: red;
-    --base-color-container-2: blue;
-    --base-color-container-3: green;
-  }
+
+  $base-color-container-1: red;
+  $base-color-container-2: blue;
+  $base-color-container-3: green;
