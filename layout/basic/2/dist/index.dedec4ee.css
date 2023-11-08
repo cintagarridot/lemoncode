@@ -1,0 +1,45 @@
+.container {
+  flex-flow: column wrap;
+  margin: 5px;
+  display: flex;
+}
+
+.box, .warning, .important, .base, .box-with-shadow {
+  border: 1px solid gray;
+  border-radius: 1px;
+  align-items: center;
+  width: 6vw;
+  height: 4vh;
+  padding: 35px;
+  font-weight: bold;
+  display: flex;
+}
+
+.box-with-shadow {
+  margin-top: 15px;
+  box-shadow: -20px 15px 10px -10px #000;
+}
+
+.principal-font {
+  padding-top: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.secondary-font {
+  padding-top: 15px;
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.base {
+  background-color: red;
+}
+
+.important {
+  background-color: brown;
+}
+
+.warning {
+  background-color: pink;
+}
+
+/*# sourceMappingURL=index.dedec4ee.css.map */
