@@ -45,7 +45,7 @@
 213C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\@parcel\core\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mdb_stat.c133439288069612319 0
 161C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\weak-lru-cache\tests\benchmark.js133439288054750918 0
 152C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\abortcontroller-polyfill133439288062622276 1
-119C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\dist133439298558199569 1
+119C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\dist133439300210628229 1
 167C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\caniuse-lite\data\features\gyroscope.js133439288100026893 0
 180C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\@parcel\utils\test\input\sourcemap\referenced-min.js133439288072352043 0
 177C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\@parcel\core\node_modules\@parcel\diagnostic\test133439288057233875 1
@@ -60,7 +60,7 @@
 159C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\caniuse-lite\data\regions\NC.js133439288106958831 0
 162C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\@parcel\utils\src\openInBrowser.js133439288071072220 0
 118C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\src133413422244045435 1
-128C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\src\base.scss133439298747830347 0
+128C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\src\base.scss133439300210027123 0
 153C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\@parcel\utils\src\glob.js133439288065621447 0
 179C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\@parcel\core\node_modules\@parcel\fs\lib\types.d.ts133439288064136352 0
 146C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\lmdb\src\windows.c133439288073918818 0
@@ -1593,7 +1593,7 @@
 159C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\caniuse-lite\data\regions\RU.js133439288109889178 0
 162C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\caniuse-lite\data\features\calc.js133439288076022519 0
 178C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\caniuse-lite\data\features\font-variant-numeric.js133439288098886132 0
-142C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\dist\index.dedec4ee.css.map133439298558190784 0
+142C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\dist\index.dedec4ee.css.map133439300210628229 0
 157C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\@lezer\lr\dist\constants.d.ts133439288060273098 0
 159C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\caniuse-lite\data\regions\RW.js133439288109989477 0
 159C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\caniuse-lite\data\regions\SA.js133439288110019779 0
@@ -1809,7 +1809,7 @@
 168C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\caniuse-lite\data\features\css-resize.js133439288084584870 0
 174C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\caniuse-lite\data\features\css-revert-value.js133439288084617375 0
 170C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\caniuse-lite\data\features\css-rrggbbaa.js133439288084870437 0
-130C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\dist\index.html133439298373687668 0
+130C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\dist\index.html133439299324515858 0
 177C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\caniuse-lite\data\features\css-scroll-behavior.js133439288085371528 0
 176C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\@parcel\core\test\fixtures\common-targets-ignore133439288084194014 1
 171C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\caniuse-lite\data\features\css-scrollbar.js133439288085457284 0
@@ -2169,7 +2169,7 @@
 151C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\braces\lib\constants.js133439288058115890 0
 170C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\@parcel\core\test\PublicDependency.test.js133439288078793106 0
 151C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\braces\lib\stringify.js133439288060373979 0
-133C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\dist\2.59712999.js133439298373677673 0
+133C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\dist\2.59712999.js133439299323663320 0
 168C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\binary-extensions\binary-extensions.json133439288055058537 0
 158C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\@parcel\core\src\buildCache.js133439288067497483 0
 173C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\binary-extensions\binary-extensions.json.d.ts133439288057161980 0
@@ -2986,5 +2986,5 @@
 155C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\.bin\update-browserslist-db133439288121599101 0
 159C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\.bin\update-browserslist-db.cmd133439288121587285 0
 159C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\node_modules\.bin\update-browserslist-db.ps1133439288121587285 0
-137C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\dist\2.59712999.js.map133439298373727688 0
-138C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\dist\index.dedec4ee.css133439298558120442 0
+137C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\dist\2.59712999.js.map133439299323783371 0
+138C:\Users\GarridoTorneroC\OneDrive - Version 1\Desktop\lemonCode\modulo layout\LABORATORIO\lemoncode\layout\basic\2\dist\index.dedec4ee.css133439300210588191 0
