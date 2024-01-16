@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { defaultOrganization, searchButton, searchLabel } from "./constants";
+import { OrganizationContext } from "./contexts/organizationContext";
 
 interface MemberEntity {
   id: string;
@@ -10,12 +11,10 @@ interface MemberEntity {
 
 export const ListPage: React.FC = () => {
   const [members, setMembers] = React.useState<MemberEntity[]>([]);
-  const [organizationValue, setOrganizationValue] = React.useState<string | number | readonly string[]>();
+  const  {organization, setOrganization } = React.useContext(OrganizationContext)
 
+  console.log('organization', organization)
   const fetchApi = () => {
-    console.log('organizationValue', organizationValue)
-    const organization = organizationValue || defaultOrganization;
-    console.log('organization', organization)
     fetch(`https://api.github.com/orgs/${organization}/members`)
       .then((response) => response.json())
       .then((json) => setMembers(json));
@@ -26,7 +25,7 @@ export const ListPage: React.FC = () => {
   }, []);
 
   const handleOnChangeInputValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setOrganizationValue(event.target.value);
+    setOrganization(event.target.value);
   };
 
   const handleOnClick = () => {
@@ -38,7 +37,7 @@ export const ListPage: React.FC = () => {
       <h2>Hello from List page</h2>+{" "}
       <div className="searchBar">
         <h3>{searchLabel}</h3>
-        <input placeholder="Enter an organization" defaultValue={defaultOrganization} value={organizationValue} onChange={handleOnChangeInputValue} type="search" className="inputSearch" />
+        <input placeholder="Enter an organization" value={organization} onChange={handleOnChangeInputValue} type="search" className="inputSearch" />
         <button onClick={handleOnClick}>{searchButton}</button>
       </div>
       <div className="list-user-list-container">
