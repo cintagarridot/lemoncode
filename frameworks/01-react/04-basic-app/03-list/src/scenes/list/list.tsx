@@ -1,6 +1,7 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
+import Pagination from '@material-ui/lab/Pagination';
 import { Link } from "react-router-dom";
-import { avatarTitle, idTitle, nameTitle, navigateToDetails, searchButton, searchLabel } from "../constants";
+import { avatarTitle, idTitle, listPageTitle, nameTitle, navigateToDetails, searchButton, searchLabel } from "../constants";
 import { OrganizationContext } from "../../contexts/organizationContext";
 
 interface MemberEntity {
@@ -9,20 +10,26 @@ interface MemberEntity {
   avatar_url: string;
 }
 
+const PER_PAGE = 5;
+
 export const ListPage: React.FC = () => {
   const [members, setMembers] = React.useState<MemberEntity[]>([]);
   const  {organization, setOrganization } = React.useContext(OrganizationContext)
+  const [page, setPage] = useState<number>(1);
+  const [noOfPages, setNoOfPages] = useState<number>();
 
-  console.log('organization', organization)
   const fetchApi = () => {
     fetch(`https://api.github.com/orgs/${organization}/members`)
       .then((response) => response.json())
-      .then((json) => setMembers(json));
+      .then((json) => {
+        setMembers(json)
+        setNoOfPages(Math.ceil(json.length / PER_PAGE));
+      });
   }
 
   React.useEffect(() => {
     fetchApi();
-  }, []);
+  });
 
   const handleOnChangeInputValue = (event: React.ChangeEvent<HTMLInputElement>) => {
     setOrganization(event.target.value);
@@ -32,9 +39,13 @@ export const ListPage: React.FC = () => {
     fetchApi();
   };
 
+  const handleChange = (event, value) => {
+    setPage(value);
+  };
+
   return (
     <>
-      <h2>Hello from List page</h2>+{" "}
+      <h2>{listPageTitle}</h2>+{" "}
       <div className="searchBar">
         <h3>{searchLabel}</h3>
         <input placeholder="Enter an organization" value={organization} onChange={handleOnChangeInputValue} type="search" className="inputSearch" />
@@ -44,7 +55,9 @@ export const ListPage: React.FC = () => {
         <span className="list-header">{avatarTitle}</span>
         <span className="list-header">{idTitle}</span>
         <span className="list-header">{nameTitle}</span>
-        {members.map((member) => (
+        {members
+        .slice((page - 1) * PER_PAGE, page * PER_PAGE)
+        .map((member) => (
           <>
             <img src={member.avatar_url} />
             <span>{member.id}</span>
@@ -53,6 +66,15 @@ export const ListPage: React.FC = () => {
         ))}
       </div>
       <Link to="/detail">{navigateToDetails}</Link>
+      <Pagination
+        count={noOfPages}
+        size="large"
+        page={page}
+        variant="outlined"
+        shape="rounded"
+        onChange={handleChange}
+      />
+
     </>
   );
 };
