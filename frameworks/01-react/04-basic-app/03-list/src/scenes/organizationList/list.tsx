@@ -29,7 +29,7 @@ export const ListPage: React.FC = () => {
 
   React.useEffect(() => {
     fetchApi();
-  });
+  }, []);
 
   const handleOnChangeInputValue = (event: React.ChangeEvent<HTMLInputElement>) => {
     setOrganization(event.target.value);
@@ -46,6 +46,7 @@ export const ListPage: React.FC = () => {
   return (
     <>
       <h2>{listPageTitle}</h2>+{" "}
+      <Link to="/rick-and-morty/list">Rick y Morty List</Link>
       <div className="searchBar">
         <h3>{searchLabel}</h3>
         <input placeholder="Enter an organization" value={organization} onChange={handleOnChangeInputValue} type="search" className="inputSearch" />
@@ -61,7 +62,7 @@ export const ListPage: React.FC = () => {
           <>
             <img src={member.avatar_url} />
             <span>{member.id}</span>
-            <Link to={`/detail/${member.login}`}>{member.login}</Link>
+            <Link to={`/detail/member/${member.login}`}>{member.login}</Link>
           </>
         ))}
       </div>
