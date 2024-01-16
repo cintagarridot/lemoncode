@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-import { defaultOrganization, searchButton, searchLabel } from "./constants";
-import { OrganizationContext } from "./contexts/organizationContext";
+import { avatarTitle, idTitle, nameTitle, navigateToDetails, searchButton, searchLabel } from "../constants";
+import { OrganizationContext } from "../../contexts/organizationContext";
 
 interface MemberEntity {
   id: string;
@@ -41,9 +41,9 @@ export const ListPage: React.FC = () => {
         <button onClick={handleOnClick}>{searchButton}</button>
       </div>
       <div className="list-user-list-container">
-        <span className="list-header">Avatar</span>
-        <span className="list-header">Id</span>
-        <span className="list-header">Name</span>
+        <span className="list-header">{avatarTitle}</span>
+        <span className="list-header">{idTitle}</span>
+        <span className="list-header">{nameTitle}</span>
         {members.map((member) => (
           <>
             <img src={member.avatar_url} />
@@ -52,7 +52,7 @@ export const ListPage: React.FC = () => {
           </>
         ))}
       </div>
-      <Link to="/detail">Navigate to detail page</Link>
+      <Link to="/detail">{navigateToDetails}</Link>
     </>
   );
 };
