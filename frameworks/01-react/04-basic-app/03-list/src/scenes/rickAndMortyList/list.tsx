@@ -38,8 +38,8 @@ export const RickAndMortyList: React.FC = () => {
 
   const handleOnClick = () => {
     debugger;
-    const {id} = characters.find((ch) => ch.name === character);
-    fetch(`https://rickandmortyapi.com/api/character/${id}`)
+    const { id } = characters.find((ch) => ch.name === character);
+        fetch(`https://rickandmortyapi.com/api/character/${id}`)
       .then((response) => response.json())
       .then((json) => {
         setCharacters([json])
@@ -47,7 +47,7 @@ export const RickAndMortyList: React.FC = () => {
       });
   };
 
-  const handleChange = (event, value) => {
+  const handleChange = (_event, value) => {
     setPage(value);
   };
 
@@ -56,7 +56,7 @@ export const RickAndMortyList: React.FC = () => {
       <h2>{listRickAndMortyPageTitle}</h2>+{" "}
       <div className="searchBar">
         <h3>{searchLabel}</h3>
-        <input placeholder="Enter an organization" value={character} onChange={handleOnChangeInputValue} type="search" className="inputSearch" />
+        <input placeholder="Enter a character name" value={character} onChange={handleOnChangeInputValue} type="search" className="inputSearch" />
         <button onClick={handleOnClick}>{searchButton}</button>
       </div>
       <div className="list-user-list-container">
@@ -69,7 +69,7 @@ export const RickAndMortyList: React.FC = () => {
           <>
             <img src={character.image} />
             <span>{character.id}</span>
-            <Link to={`/detail/character/${character.name}`}>{character.name}</Link>
+            <Link to={`/detail/character/${character.id}`}>{character.name}</Link>
           </>
         ))}
       </div>

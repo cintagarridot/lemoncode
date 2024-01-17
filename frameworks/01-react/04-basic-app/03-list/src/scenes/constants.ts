@@ -11,3 +11,6 @@ export const backToListPage = 'Back to list page';
 
 export const listPageTitle = 'Hello from Member List page';
 export const listRickAndMortyPageTitle = 'Hello from Rick and Morty List page';
+
+export const characterName = 'Character name:'
+export const numberOfEpisodes = 'Number of Episodes:'
