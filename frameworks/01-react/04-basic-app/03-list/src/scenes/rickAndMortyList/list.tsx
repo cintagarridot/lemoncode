@@ -37,7 +37,6 @@ export const RickAndMortyList: React.FC = () => {
   };
 
   const handleOnClick = () => {
-    debugger;
     const { id } = characters.find((ch) => ch.name === character);
         fetch(`https://rickandmortyapi.com/api/character/${id}`)
       .then((response) => response.json())
