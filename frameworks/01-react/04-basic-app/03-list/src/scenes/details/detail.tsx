@@ -12,31 +12,18 @@ interface CharacterEntity {
   episode: string[];
 }
 
-interface MemberEntity {
-  id: string;
-  login: string;
-  avatar_url: string;
-}
-
 export const DetailPage: React.FC = () => {
   const {id, type} = useParams();
-  const [data, setData] = useState<CharacterEntity | MemberEntity>();
-  const { organization } = useContext(OrganizationContext);
+  const [characterData, setCharacterData] = useState<CharacterEntity>();
 
   useEffect(() => {
     if (type === 'character') {
       fetch(`https://rickandmortyapi.com/api/character/${id}`)
         .then((response) => response.json())
         .then((json) => {
-          setData(json)
+          setCharacterData(json)
         });
-    } else {
-      fetch(`https://api.github.com/orgs/${organization}/members/${id}`)
-      .then((response) => response.json())
-      .then((json) => {
-        setData(json)
-      });
-    }
+    } 
   }, []);
 
   return (
@@ -45,12 +32,16 @@ export const DetailPage: React.FC = () => {
         <div>
         <h2>{titleDetails}</h2>
         <h3>{userId} {id}</h3>
-        <h3>{characterName} {type === 'member' ? (data as MemberEntity)?.login : (data as CharacterEntity)?.name}</h3>
         {type === 'character' && (
-          <h4>{numberOfEpisodes} {(data as CharacterEntity)?.episode.length + 1}</h4>
+          <>
+            <h3>{characterName} {characterData?.name}</h3>
+            <h4>{numberOfEpisodes} {characterData?.episode.length + 1}</h4>
+          </>
         )}
         </div>
-        <img title="Character Image" className="image" src={type === 'member' ? (data as MemberEntity)?.avatar_url : (data as CharacterEntity)?.image} />
+        {type === 'character' && (
+          <img title="Character Image" className="image" src={characterData?.image} />
+        )}
       </div>
       <Link to={type === 'member' ? '/list' : '/rick-and-morty/list'}>{backToListPage}</Link>
     </div>

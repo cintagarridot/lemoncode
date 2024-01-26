@@ -39,7 +39,7 @@ export const ListPage: React.FC = () => {
     fetchApi();
   };
 
-  const handleChange = (event, value) => {
+  const handleChange = (_event, value) => {
     setPage(value);
   };
 
