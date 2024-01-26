@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Pagination from '@material-ui/lab/Pagination';
 import { Link } from "react-router-dom";
-import { avatarTitle, idTitle, listRickAndMortyPageTitle, nameTitle, searchButton, searchLabel } from "../constants";
+import { alertMessageCharacters, avatarTitle, idTitle, listRickAndMortyPageTitle, nameTitle, searchButton, searchLabel, organizationListLink } from "../constants";
 import { RickAndMortyContext } from "../../contexts/rickAndMortyContext";
+import { Alert } from "@material-ui/lab";
 
 interface CharacterEntity {
   id: string;
@@ -15,9 +16,9 @@ const PER_PAGE = 5;
 export const RickAndMortyList: React.FC = () => {
   const [characters, setCharacters] = React.useState<CharacterEntity[]>([]);
   const  {character, setCharacter } = React.useContext(RickAndMortyContext);
-  const [characterId, setCharacterId] = React.useState<string>();
   const [page, setPage] = useState<number>(1);
   const [noOfPages, setNoOfPages] = useState<number>();
+  const [showAlert, setShowAlert] = useState<boolean>(false);
 
   const fetchApi = () => {
     fetch(`https://rickandmortyapi.com/api/character`)
@@ -36,9 +37,14 @@ export const RickAndMortyList: React.FC = () => {
     setCharacter(event.target.value);
   };
 
-  const handleOnClick = () => {
-    const { id } = characters.find((ch) => ch.name === character);
-        fetch(`https://rickandmortyapi.com/api/character/${id}`)
+  const handleSearch = () => {
+    const found = characters.find((ch) => ch.name === character);
+    if (!found) {
+      setShowAlert(true);
+      return;
+    }
+    setShowAlert(false);
+      fetch(`https://rickandmortyapi.com/api/character/${found.id}`)
       .then((response) => response.json())
       .then((json) => {
         setCharacters([json])
@@ -53,12 +59,16 @@ export const RickAndMortyList: React.FC = () => {
   return (
     <>
       <h2>{listRickAndMortyPageTitle}</h2>+{" "}
+      <Link to="/list">{organizationListLink}</Link>
       <div className="searchBar">
         <h3>{searchLabel}</h3>
         <input placeholder="Enter a character name" value={character} onChange={handleOnChangeInputValue} type="search" className="inputSearch" />
-        <button onClick={handleOnClick}>{searchButton}</button>
+        <button onClick={handleSearch}>{searchButton}</button>
       </div>
-      <div className="list-user-list-container">
+      {showAlert && (<Alert severity="error">
+        {alertMessageCharacters}
+      </Alert>)}
+      <div className="mt-1 list-user-list-container">
         <span className="list-header">{avatarTitle}</span>
         <span className="list-header">{idTitle}</span>
         <span className="list-header">{nameTitle}</span>
@@ -72,6 +82,7 @@ export const RickAndMortyList: React.FC = () => {
           </>
         ))}
       </div>
+     
       <Pagination
         count={noOfPages}
         size="large"
