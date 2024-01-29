@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Pagination from '@material-ui/lab/Pagination';
+import Pagination from '@mui/material/Pagination';
 import { Link } from "react-router-dom";
 import { avatarTitle, idTitle, listPageTitle, nameTitle, navigateToDetails, searchButton, searchLabel } from "../constants";
 import { OrganizationContext } from "../../contexts/organizationContext";
@@ -66,7 +66,6 @@ export const ListPage: React.FC = () => {
           </>
         ))}
       </div>
-      <Link to="/detail">{navigateToDetails}</Link>
       <Pagination
         count={noOfPages}
         size="large"
@@ -75,7 +74,6 @@ export const ListPage: React.FC = () => {
         shape="rounded"
         onChange={handleChange}
       />
-
     </>
   );
 };
