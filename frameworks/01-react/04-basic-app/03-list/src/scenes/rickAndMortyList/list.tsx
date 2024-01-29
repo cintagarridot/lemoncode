@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Pagination from '@material-ui/lab/Pagination';
+import Pagination from '@mui/material/Pagination';
 import { Link } from "react-router-dom";
 import { alertMessageCharacters, avatarTitle, idTitle, listRickAndMortyPageTitle, nameTitle, searchButton, searchLabel, organizationListLink } from "../constants";
 import { RickAndMortyContext } from "../../contexts/rickAndMortyContext";
-import { Alert } from "@material-ui/lab";
+import { Alert } from "@mui/material";
 
 interface CharacterEntity {
   id: string;
@@ -82,7 +82,6 @@ export const RickAndMortyList: React.FC = () => {
           </>
         ))}
       </div>
-     
       <Pagination
         count={noOfPages}
         size="large"

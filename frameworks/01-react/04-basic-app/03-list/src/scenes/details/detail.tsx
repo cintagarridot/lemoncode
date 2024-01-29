@@ -1,7 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { backToListPage, characterName, numberOfEpisodes, titleDetails, userId } from "../constants";
-import { OrganizationContext } from "../../contexts/organizationContext";
 
 import './detail.css';
 
