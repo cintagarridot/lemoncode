@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Pagination from '@mui/material/Pagination';
 import { Link } from "react-router-dom";
-import { avatarTitle, idTitle, listPageTitle, nameTitle, navigateToDetails, searchButton, searchLabel } from "../../constants";
-import { OrganizationContext } from "../../core/organizations/organizations.context";
+import { avatarTitle, idTitle, listPageTitle, nameTitle, searchButton, searchLabel } from "../../constants";
 import { Constants } from "./github-members.constants";
 import { MemberEntity } from "./github-members.vm";
+import './github-members.styles.css';
 
 interface Props {
   members: MemberEntity[],
@@ -48,14 +48,17 @@ export const GithubMembersList: React.FC<Props> = ({
           </>
         ))}
       </div>
-      <Pagination
+      <div className="paginationDiv">
+        <Pagination
         count={noOfPages}
         size="large"
         page={page}
         variant="outlined"
         shape="rounded"
         onChange={handleChange}
-      />
+        />
+      </div>
+      
     </>
   );
 

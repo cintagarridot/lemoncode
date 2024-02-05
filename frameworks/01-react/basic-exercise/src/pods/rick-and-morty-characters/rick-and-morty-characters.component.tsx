@@ -53,13 +53,16 @@ export const RickAndMortyCharactersList: React.FC<Props> = ({
           </>
         ))}
       </div>
-      <Pagination
-        count={noOfPages}
-        size="large"
-        page={page}
-        variant="outlined"
-        shape="rounded"
-        onChange={handleChange}
-      />
+      <div className="paginationDiv">
+        <Pagination
+          count={noOfPages}
+          size="large"
+          page={page}
+          variant="outlined"
+          shape="rounded"
+          onChange={handleChange}
+        />
+      </div>
+      
     </>
   );

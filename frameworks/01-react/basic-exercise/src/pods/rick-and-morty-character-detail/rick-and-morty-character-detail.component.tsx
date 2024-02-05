@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import './rick-and-morty-character-detail.styles.css'
 import { Constants } from "./rick-and-morty-character-detail.constants";
 import { CharacterEntity } from "./rick-and-morty-character-detail.vm";
+import './rick-and-morty-character-detail.styles.css';
 
 interface Props {
     characterData: CharacterEntity,
@@ -13,7 +14,6 @@ interface Props {
 export const CharacterDetails: React.FC<Props> = ({
     characterData, id
 }) => {
-  console.log('characterData', characterData)
   return (
     <div>
       <div className="titleAndImage">
@@ -25,7 +25,7 @@ export const CharacterDetails: React.FC<Props> = ({
         </div>
         <img title={Constants.characterImageTitle} className="image" src={characterData?.image} />
       </div>
-      <Link to='/rick-and-morty/list'>{Constants.backToListPage}</Link>
+      <Link className="link" to='/rick-and-morty/list'>{Constants.backToListPage}</Link>
     </div>
   );
 };
