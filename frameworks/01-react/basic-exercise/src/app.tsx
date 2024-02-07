@@ -7,8 +7,6 @@ import {
   GithubMembersScene, GithubMemberDetailScene,
 } from "./scenes";
 
-
-
 export const App = () => {
   return (
     <Router>

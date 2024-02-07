@@ -11,10 +11,7 @@ export const MemberDetailPage: React.FC = () => {
 
   const fetchApi = () => {
     getMemberDetails(id)
-      .then((data) => {
-        console.log('data', data);
-        setMember(data)
-      });
+      .then(setMember);
   }
 
   React.useEffect(() => {

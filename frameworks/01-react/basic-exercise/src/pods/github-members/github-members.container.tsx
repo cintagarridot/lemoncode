@@ -13,11 +13,13 @@ export const MembersListPage: React.FC = () => {
   const [noOfPages, setNoOfPages] = useState<number>();
 
   const fetchApi = () => {
-    getMembersByOrganization(organization)
+    if (organization !== '') {
+      getMembersByOrganization(organization)
       .then((data) => {
         setMembers(data)
         setNoOfPages(Math.ceil(data.length / Constants.PER_PAGE));
       });
+    }
   }
 
   React.useEffect(() => {

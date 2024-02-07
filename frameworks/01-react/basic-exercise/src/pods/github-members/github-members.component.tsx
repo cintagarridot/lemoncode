@@ -1,7 +1,6 @@
 import React from "react";
 import Pagination from '@mui/material/Pagination';
 import { Link } from "react-router-dom";
-import { avatarTitle, idTitle, listPageTitle, nameTitle, searchButton, searchLabel } from "../../constants";
 import { Constants } from "./github-members.constants";
 import { MemberEntity } from "./github-members.vm";
 import './github-members.styles.css';
@@ -27,18 +26,18 @@ export const GithubMembersList: React.FC<Props> = ({
 }) => (
 
     <>
-      <h2>{listPageTitle}</h2>+{" "}
+      <h2>{Constants.listPageTitle}</h2>+{" "}
       <Link to="/rick-and-morty/list">{Constants.rickAndMortyListLink}</Link>
       <div className="searchBar">
-        <h3>{searchLabel}</h3>
+        <h3>{Constants.searchLabel}</h3>
         <input placeholder="Enter an organization" value={organization} onChange={handleOnChangeInputValue} type="search" className="inputSearch" />
-        <button onClick={handleOnClick}>{searchButton}</button>
+        <button onClick={handleOnClick}>{Constants.searchButton}</button>
       </div>
       <div className="list-user-list-container">
-        <span className="list-header">{avatarTitle}</span>
-        <span className="list-header">{idTitle}</span>
-        <span className="list-header">{nameTitle}</span>
-        {members
+        <span className="list-header">{Constants.avatarTitle}</span>
+        <span className="list-header">{Constants.idTitle}</span>
+        <span className="list-header">{Constants.nameTitle}</span>
+        {members.length && members
         .slice((page - 1) * Constants.PER_PAGE, page * Constants.PER_PAGE)
         .map((member) => (
           <>

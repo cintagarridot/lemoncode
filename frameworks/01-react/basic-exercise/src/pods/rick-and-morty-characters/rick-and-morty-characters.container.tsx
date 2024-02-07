@@ -12,23 +12,45 @@ export const RickAndMortyListPage: React.FC = () => {
   const [noOfPages, setNoOfPages] = useState<number>();
   const [showAlert, setShowAlert] = useState<boolean>(false);
 
-  const fetchApi = () => {
-    getCharacters().then((data) => {
-      setCharacters(data)
-      setNoOfPages(Math.ceil(data.length / Constants.PER_PAGE));
-    })
+  const getCharacterIDFromCharacterName = (charactersData: CharacterEntity[]) => {
+    return charactersData.find((ch) => ch.name === character);
+  };
+
+  const fetchApi = (clearFilterChar: boolean = false) => {
+      getCharacters().then((charactersArray) => {
+        if (character && !clearFilterChar) {
+          const found = getCharacterIDFromCharacterName(charactersArray);
+          getCharacterDetails(found.id)
+          .then((characterData) => {
+            setCharacters([characterData])
+          });
+          return;
+        } 
+        setCharacters(charactersArray)
+        setNoOfPages(Math.ceil(charactersArray.length / Constants.PER_PAGE));
+    });    
   }
 
   React.useEffect(() => {
     fetchApi();
   }, []);
 
+  const handleClearFilter = () => {
+    setCharacter('');
+    fetchApi(true);
+  }
+
   const handleOnChangeInputValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setCharacter(event.target.value);
+    const { value } = event.target;
+    if (value === '') {
+      handleClearFilter();
+      return;
+    }
+    setCharacter(value);
   };
 
   const handleSearch = () => {
-    const found = characters.find((ch) => ch.name === character);
+    const found = getCharacterIDFromCharacterName(characters);
     if (!found) {
       setShowAlert(true);
       return;
@@ -44,6 +66,8 @@ export const RickAndMortyListPage: React.FC = () => {
     setPage(value);
   };
 
+ 
+
   return <RickAndMortyCharactersList
     showAlert={showAlert}
     characters={characters}
@@ -53,5 +77,6 @@ export const RickAndMortyListPage: React.FC = () => {
     noOfPages={noOfPages}
     page={page}
     handleChange={handleChange}
+    handleClearFilter={handleClearFilter}
   />
 };

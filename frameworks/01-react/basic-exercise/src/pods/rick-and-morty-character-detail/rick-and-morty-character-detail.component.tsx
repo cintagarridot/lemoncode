@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import './rick-and-morty-character-detail.styles.css'
 import { Constants } from "./rick-and-morty-character-detail.constants";
 import { CharacterEntity } from "./rick-and-morty-character-detail.vm";
 import './rick-and-morty-character-detail.styles.css';

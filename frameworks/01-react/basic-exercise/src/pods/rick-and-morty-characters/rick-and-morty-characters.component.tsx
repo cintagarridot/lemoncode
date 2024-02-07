@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Pagination from '@mui/material/Pagination';
 import { Link } from "react-router-dom";
-import { alertMessageCharacters, avatarTitle, idTitle, listRickAndMortyPageTitle, nameTitle, searchButton, searchLabel, organizationListLink } from "../../constants";
 import { Alert } from "@mui/material";
-import { CharactersContext } from "../../core/characters/characters.context";
 import { Constants } from "./rick-and-morty-characters.constants";
 import { CharacterEntity } from "./rick-and-morty-characters.vm";
+import './rick-and-morty-characters.css';
 
 interface Props {
   showAlert: boolean,
@@ -16,6 +15,7 @@ interface Props {
   noOfPages: number,
   page: number,
   handleChange: (event, value) => void,
+  handleClearFilter: () => void,
 }
 
 export const RickAndMortyCharactersList: React.FC<Props> = ({
@@ -27,22 +27,27 @@ export const RickAndMortyCharactersList: React.FC<Props> = ({
   noOfPages,
   page,
   handleChange,
+  handleClearFilter,
 }) => (
     <>
-      <h2>{listRickAndMortyPageTitle}</h2>+{" "}
-      <Link to="/list">{organizationListLink}</Link>
+      <h2>{Constants.listRickAndMortyPageTitle}</h2>+{" "}
+      <Link to="/list">{Constants.organizationListLink}</Link>
       <div className="searchBar">
-        <h3>{searchLabel}</h3>
+        <h3>{Constants.searchLabel}</h3>
         <input placeholder={Constants.enterNamePlaceholder} value={character} onChange={handleOnChangeInputValue} type="search" className="inputSearch" />
-        <button onClick={handleSearch}>{searchButton}</button>
+        <div className="buttons">
+          <button onClick={handleSearch}>{Constants.searchButton}</button>
+          <button onClick={handleClearFilter}>{Constants.clearFilter}</button>
+        </div>
+        
       </div>
       {showAlert && (<Alert severity="error">
-        {alertMessageCharacters}
+        {Constants.alertMessageCharacters}
       </Alert>)}
       <div className="mt-1 list-user-list-container">
-        <span className="list-header">{avatarTitle}</span>
-        <span className="list-header">{idTitle}</span>
-        <span className="list-header">{nameTitle}</span>
+        <span className="list-header">{Constants.avatarTitle}</span>
+        <span className="list-header">{Constants.idTitle}</span>
+        <span className="list-header">{Constants.nameTitle}</span>
         {characters
         .slice((page - 1) * Constants.PER_PAGE, page * Constants.PER_PAGE)
         .map((character) => (
