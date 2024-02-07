@@ -1,0 +1,15 @@
+.titleAndImage {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
