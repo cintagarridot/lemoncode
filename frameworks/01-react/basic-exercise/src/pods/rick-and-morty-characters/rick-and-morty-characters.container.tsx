@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { CharactersContext } from "../../core/characters/characters.context";
+import { CharactersContext } from "../../core/providers/characters/characters.context";
 import { CharacterEntity } from "./rick-and-morty-characters.vm";
 import { Constants } from "./rick-and-morty-characters.constants";
 import { RickAndMortyCharactersList } from "./rick-and-morty-characters.component";
-import { getCharacterDetails, getCharacters } from "./api/api";
+import { getCharacterDetails } from "./api/api";
+import { getCharacters } from "./rick-and-morty-characters.repository";
 
 export const RickAndMortyListPage: React.FC = () => {
   const [characters, setCharacters] = React.useState<CharacterEntity[]>([]);

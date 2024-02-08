@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { OrganizationContext } from "../../core/organizations/organizations.context";
+import { OrganizationContext } from "../../core/providers/organizations/organizations.context";
 import { GithubMembersList } from "./github-members.component";
 import { MemberEntity } from "./github-members.vm";
 import { Constants } from "./github-members.constants";
-import { getMembersByOrganization } from "./api";
+import { getMembers } from "./member-list.repository";
 
 
 export const MembersListPage: React.FC = () => {
@@ -14,7 +14,7 @@ export const MembersListPage: React.FC = () => {
 
   const fetchApi = () => {
     if (organization !== '') {
-      getMembersByOrganization(organization)
+      getMembers(organization)
       .then((data) => {
         setMembers(data)
         setNoOfPages(Math.ceil(data.length / Constants.PER_PAGE));
