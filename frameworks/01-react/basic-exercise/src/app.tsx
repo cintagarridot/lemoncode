@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { CharactersProvider } from "./core/characters/characters.provider";
-import { OrganizationProvider } from "./core/organizations/organizations.provider";
+import { CharactersProvider } from "./core/providers/characters/characters.provider";
+import { OrganizationProvider } from "./core/providers/organizations/organizations.provider";
 import { 
   LoginScene, RickAndMortyCharacterDetailsScene, RickAndMortyCharactersListScene,
   GithubMembersScene, GithubMemberDetailScene,

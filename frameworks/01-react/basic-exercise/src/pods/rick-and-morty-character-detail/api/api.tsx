@@ -1,6 +1,6 @@
-import { CharacterEntity } from "../rick-and-morty-character-detail.vm";
+import { Character } from "./api.model";
 
-export const getCharacterDetails = (id: string): Promise<CharacterEntity> => {
+export const getCharacterDetails = (id: string): Promise<Character> => {
   return fetch(`https://rickandmortyapi.com/api/character/${id}`)
     .then((response) => response.json());
 }
