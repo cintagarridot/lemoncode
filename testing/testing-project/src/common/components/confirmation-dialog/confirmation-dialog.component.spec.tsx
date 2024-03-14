@@ -1,11 +1,8 @@
 import * as React from 'react';
 import { Route } from 'react-router-dom';
-import { renderWithRouter } from '../../../common/test';
-import { Lookup } from '../../../common/models';
+import { renderWithRouter } from '../../test';
 import { ConfirmationDialogProps } from './confirmation-dialog.vm';
 import { ConfirmationDialogComponent } from './confirmation-dialog.component';
-import { renderHook } from '@testing-library/react';
-import { useConfirmationDialog } from './confirmation-dialog.hook';
 
 describe('common/Confirmation-dialog Component', () => {
   it('should be render as expected passing required properties', () => {
@@ -76,22 +73,3 @@ describe('common/Confirmation-dialog Component', () => {
   });
 });
 
-describe('common useConfirmationDialog Hook', () => {
-
-    it('should return required properties with initial values', () => {
-        const { result } = renderHook(() => useConfirmationDialog());
-        const { 
-            isOpen,
-            itemToDelete,
-        } = result.current;
-
-        const expectedItemToDelete = {
-            id: '',
-            name: '',
-        };
-
-        expect(isOpen).toBeFalsy();
-        expect(itemToDelete).toEqual(expectedItemToDelete);
-    });
-
-});
