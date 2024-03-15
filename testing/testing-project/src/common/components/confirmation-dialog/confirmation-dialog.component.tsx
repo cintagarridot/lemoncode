@@ -6,22 +6,10 @@ import {
   DialogActions,
   Button,
 } from '@mui/material';
+import { ConfirmationDialogProps } from './confirmation-dialog.vm';
 
-interface LabelProps {
-  closeButton: string;
-  acceptButton: string;
-}
 
-interface Props {
-  isOpen: boolean;
-  onAccept: () => void;
-  onClose: () => void;
-  title: string | React.ReactNode;
-  labels: LabelProps;
-  children: React.ReactNode;
-}
-
-export const ConfirmationDialogComponent: React.FunctionComponent<Props> = (
+export const ConfirmationDialogComponent: React.FunctionComponent<ConfirmationDialogProps> = (
   props
 ) => {
   const { isOpen, onAccept, onClose, title, labels, children } = props;
@@ -36,10 +24,10 @@ export const ConfirmationDialogComponent: React.FunctionComponent<Props> = (
       <DialogTitle>{title}</DialogTitle>
       <DialogContent>{children}</DialogContent>
       <DialogActions>
-        <Button onClick={onClose} color="secondary" variant="contained">
+        <Button onClick={onClose} data-testid="close-button" color="secondary" variant="contained">
           {labels.closeButton}
         </Button>
-        <Button onClick={handleAccept} color="primary" variant="contained">
+        <Button onClick={handleAccept} data-testid="accept-button" color="primary" variant="contained">
           {labels.acceptButton}
         </Button>
       </DialogActions>
